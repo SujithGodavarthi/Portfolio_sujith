@@ -20,13 +20,16 @@ const Hero = () => {
               <div className="w-12 h-12 bg-black rounded-2"></div>
               <span className="font-playfair font-semibold text-2xl">Sujith G</span>
             </div>
-            <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-2xl">
-              Architecting
+            <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-3xl">
+              QA Engineer &
               <br />
-              <span className="italic">Digital</span>
+              <span className="italic">Full Stack</span>
               <br />
-              Experiences
+              Developer
             </h1>
+            <p className="text-lg md:text-xl text-gray-600 mt-6 max-w-2xl leading-relaxed">
+              Crafting seamless digital experiences through meticulous testing and innovative development.
+            </p>
           </div>
           
           {/* Arrow indicator - bottom right */}

@@ -10,10 +10,8 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: 'in' },
-    { name: 'GitHub', href: '#', icon: 'git' },
-    { name: 'Twitter', href: '#', icon: 'tw' },
-    { name: 'Dribbble', href: '#', icon: 'dr' }
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/sujith-g-70b243232', icon: 'in' },
+    { name: 'GitHub', href: 'https://github.com/SujithGodavarthi', icon: 'git' }
   ];
 
   return (
@@ -40,6 +38,8 @@ const Footer = () => {
               <a
                 key={link.name}
                 href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-2 flex items-center justify-center hover:bg-gray-700 transition-colors duration-200"
                 aria-label={`Visit ${link.name} profile`}
               >
@@ -51,7 +51,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Portfolio. All rights reserved.
+            © 2024 Sujith G. All rights reserved.
           </p>
         </div>
       </div>

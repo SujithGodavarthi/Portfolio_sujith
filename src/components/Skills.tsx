@@ -3,26 +3,66 @@ import React from 'react';
 
 const Skills = () => {
   const skills = [
-    { name: 'HTML5', icon: '🌐' },
-    { name: 'CSS3', icon: '🎨' },
+    { name: 'Manual Testing', icon: '🔍' },
+    { name: 'Selenium', icon: '🤖' },
+    { name: 'Java', icon: '☕' },
+    { name: 'JIRA', icon: '📋' },
+    { name: 'SQL', icon: '🗃️' },
     { name: 'JavaScript', icon: '⚡' },
-    { name: 'React', icon: '⚛️' },
+    { name: 'React.js', icon: '⚛️' },
     { name: 'Node.js', icon: '🚀' },
-    { name: 'Git', icon: '📝' },
-    { name: 'Figma', icon: '🎯' },
-    { name: 'TypeScript', icon: '📘' },
-    { name: 'Next.js', icon: '▲' },
-    { name: 'Tailwind', icon: '💨' }
+    { name: 'Git/GitHub', icon: '📝' },
+    { name: 'Postman', icon: '📮' },
+    { name: 'TestNG', icon: '🧪' },
+    { name: 'MongoDB', icon: '🍃' }
   ];
 
   return (
     <section id="skills" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="font-playfair text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
+        <h2 className="font-playfair text-4xl md:text-5xl font-bold text-center mb-8 animate-fade-in">
           Skills & Technologies
         </h2>
         
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white p-6 rounded-2 shadow-sm border border-gray-100">
+              <h3 className="font-playfair text-xl font-semibold mb-4">Manual Testing</h3>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• Functional & Non-Functional Testing</li>
+                <li>• Regression Testing</li>
+                <li>• Test Case Design & Execution</li>
+                <li>• Integration Testing</li>
+                <li>• Bug Tracking & Reporting</li>
+                <li>• SDLC & STLC</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-6 rounded-2 shadow-sm border border-gray-100">
+              <h3 className="font-playfair text-xl font-semibold mb-4">Automation & Tools</h3>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• Selenium WebDriver</li>
+                <li>• JUnit / TestNG</li>
+                <li>• Postman (API Testing)</li>
+                <li>• SQL for Database Testing</li>
+                <li>• JIRA / Bugzilla</li>
+                <li>• Agile & DevOps</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-6 rounded-2 shadow-sm border border-gray-100">
+              <h3 className="font-playfair text-xl font-semibold mb-4">Programming</h3>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li>• Java / Core Java</li>
+                <li>• HTML, CSS, JavaScript</li>
+                <li>• React.js</li>
+                <li>• Node.js & Express.js</li>
+                <li>• MongoDB</li>
+                <li>• Version Control: Git/GitHub</li>
+              </ul>
+            </div>
+          </div>
+          
           <div className="flex overflow-x-auto skills-scroll space-x-6 pb-4">
             {skills.map((skill, index) => (
               <div

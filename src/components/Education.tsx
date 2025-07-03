@@ -4,22 +4,22 @@ import React from 'react';
 const Education = () => {
   const educationData = [
     {
-      year: '2021',
-      title: 'B.Tech Computer Science & Engineering',
-      institution: 'Technical University',
-      description: 'Specialized in software engineering and data structures'
+      year: '2019-2021',
+      title: 'Bachelor of Computer Applications (BCA)',
+      institution: 'Bapuji Institute of Hi-Tech Education, Davanagere',
+      description: 'Foundation in computer science principles and programming'
     },
     {
-      year: '2023',
-      title: 'UX Design Certificate',
-      institution: 'Design Institute',
-      description: 'Human-centered design and user research methodologies'
+      year: '2022-2024',
+      title: 'Master of Computer Applications (MCA)',
+      institution: 'Acharya Institute of Management and Science',
+      description: 'Advanced studies in software engineering and application development'
     },
     {
       year: '2024',
-      title: 'React Masterclass',
-      institution: 'Online Academy',
-      description: 'Advanced React patterns and modern development practices'
+      title: 'Professional Certifications',
+      institution: 'Multiple Platforms',
+      description: 'Softskill & Industry Readiness (Mind Parkour), Full Stack Development (LearnTube), Digital 101 Journey (Future Skills Prime)'
     }
   ];
 
@@ -27,7 +27,7 @@ const Education = () => {
     <section id="education" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="font-playfair text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
-          Education Timeline
+          Education & Certifications
         </h2>
         
         <div className="max-w-4xl mx-auto">

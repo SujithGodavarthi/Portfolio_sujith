@@ -128,7 +128,17 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-medium">Email</div>
-                      <div className="text-gray-600">sujithg@example.com</div>
+                      <div className="text-gray-600">gsuji018@gmail.com</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-black rounded-2 flex items-center justify-center">
+                      <span className="text-white text-sm">📱</span>
+                    </div>
+                    <div>
+                      <div className="font-medium">Phone</div>
+                      <div className="text-gray-600">+91 9480112318</div>
                     </div>
                   </div>
                   
@@ -138,7 +148,21 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-medium">LinkedIn</div>
-                      <div className="text-gray-600">/in/sujith-g</div>
+                      <a href="https://www.linkedin.com/in/sujith-g-70b243232" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors">
+                        /in/sujith-g-70b243232
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-black rounded-2 flex items-center justify-center">
+                      <span className="text-white text-sm">git</span>
+                    </div>
+                    <div>
+                      <div className="font-medium">GitHub</div>
+                      <a href="https://github.com/SujithGodavarthi" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors">
+                        /SujithGodavarthi
+                      </a>
                     </div>
                   </div>
                 </div>

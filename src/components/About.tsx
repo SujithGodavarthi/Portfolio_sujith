@@ -9,36 +9,35 @@ const About = () => {
           {/* Left column - Text */}
           <div className="animate-fade-in">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-8">
-              About & Company
+              About Me
             </h2>
             <div className="space-y-6">
               <div>
-                <h3 className="font-playfair text-2xl font-semibold mb-4">Our Mission</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  We craft digital experiences that bridge the gap between innovative technology 
-                  and human-centered design. Every project is an opportunity to create meaningful 
-                  connections between brands and their audiences.
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  Detail-oriented MCA graduate with hands-on experience in manual and automation testing, 
+                  test case design, and defect tracking using tools like Selenium and JIRA. Eager to contribute 
+                  to innovative QA teams by ensuring robust, scalable, and compliant software systems.
                 </p>
               </div>
               
               <div>
-                <h3 className="font-playfair text-2xl font-semibold mb-4">Services</h3>
+                <h3 className="font-playfair text-2xl font-semibold mb-4">Core Expertise</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-black rounded-full mr-3"></div>
-                    Web Development & Design
+                    Quality Assurance & Testing
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-black rounded-full mr-3"></div>
-                    User Experience Design
+                    Full Stack Development
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-black rounded-full mr-3"></div>
-                    Digital Strategy Consulting
+                    Test Automation & Selenium
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-black rounded-full mr-3"></div>
-                    Brand Identity Development
+                    SDLC & Agile Methodologies
                   </li>
                 </ul>
               </div>
@@ -50,8 +49,8 @@ const About = () => {
             <div className="relative">
               <div className="aspect-square bg-gray-100 rounded-2 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=500&h=500&fit=crop&crop=face"
-                  alt="Profile"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
+                  alt="Sujith G - QA Engineer & Full Stack Developer"
                   className="w-full h-full object-cover"
                 />
               </div>
