@@ -112,7 +112,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-medium">Email</div>
-                      <div className="text-gray-600">hello@portfolio.com</div>
+                      <div className="text-gray-600">sujithg@example.com</div>
                     </div>
                   </div>
                   
@@ -122,7 +122,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-medium">LinkedIn</div>
-                      <div className="text-gray-600">/in/portfolio-profile</div>
+                      <div className="text-gray-600">/in/sujith-g</div>
                     </div>
                   </div>
                 </div>

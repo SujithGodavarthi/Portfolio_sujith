@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="absolute top-24 left-4 md:left-8 animate-fade-in">
             <div className="flex items-center space-x-4 mb-8">
               <div className="w-12 h-12 bg-black rounded-2"></div>
-              <span className="font-playfair font-semibold text-2xl">Portfolio</span>
+              <span className="font-playfair font-semibold text-2xl">Sujith G</span>
             </div>
             <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-2xl">
               Architecting
