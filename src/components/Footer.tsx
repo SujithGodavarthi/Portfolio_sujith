@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Linkedin, Github, Mail } from 'lucide-react';
 
 const Footer = () => {
   const navLinks = [
@@ -10,8 +11,21 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/sujith-g-70b243232', icon: 'in' },
-    { name: 'GitHub', href: 'https://github.com/SujithGodavarthi', icon: 'git' }
+    { 
+      name: 'LinkedIn', 
+      href: 'https://www.linkedin.com/in/sujith-g-70b243232', 
+      icon: Linkedin 
+    },
+    { 
+      name: 'GitHub', 
+      href: 'https://github.com/SujithGodavarthi', 
+      icon: Github 
+    },
+    { 
+      name: 'Gmail', 
+      href: 'mailto:gsuji018@gmail.com', 
+      icon: Mail 
+    }
   ];
 
   return (
@@ -34,18 +48,21 @@ const Footer = () => {
           
           {/* Social Icons */}
           <div className="flex space-x-4">
-            {socialLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-2 flex items-center justify-center hover:bg-gray-700 transition-colors duration-200"
-                aria-label={`Visit ${link.name} profile`}
-              >
-                <span className="text-white text-xs font-mono">{link.icon}</span>
-              </a>
-            ))}
+            {socialLinks.map((link) => {
+              const IconComponent = link.icon;
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-2 flex items-center justify-center hover:bg-gray-700 transition-colors duration-200"
+                  aria-label={`Visit ${link.name} profile`}
+                >
+                  <IconComponent className="w-5 h-5 text-white" />
+                </a>
+              );
+            })}
           </div>
         </div>
         
