@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Linkedin, Github, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   const navLinks = [
@@ -14,62 +14,102 @@ const Footer = () => {
     { 
       name: 'LinkedIn', 
       href: 'https://www.linkedin.com/in/sujith-g-70b243232', 
-      icon: Linkedin 
+      icon: Linkedin,
+      color: 'hover:bg-blue-500'
     },
     { 
       name: 'GitHub', 
       href: 'https://github.com/SujithGodavarthi', 
-      icon: Github 
+      icon: Github,
+      color: 'hover:bg-gray-700'
     },
     { 
       name: 'Gmail', 
       href: 'mailto:gsuji018@gmail.com', 
-      icon: Mail 
+      icon: Mail,
+      color: 'hover:bg-red-500'
     }
   ];
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
-          {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center md:justify-start space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-                aria-label={`Navigate to ${link.name}`}
-              >
-                {link.name}
-              </a>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Brand Section */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold text-xl">S</span>
+              </div>
+              <span className="font-playfair font-bold text-2xl">Sujith G</span>
+            </div>
+            <p className="text-gray-400 max-w-md">
+              QA Engineer & Full Stack Developer crafting seamless digital experiences through 
+              meticulous testing and innovative development.
+            </p>
           </div>
-          
-          {/* Social Icons */}
-          <div className="flex space-x-4">
-            {socialLinks.map((link) => {
-              const IconComponent = link.icon;
-              return (
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-playfair text-lg font-semibold mb-4">Quick Links</h3>
+            <div className="grid grid-cols-2 gap-2">
+              {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-2 flex items-center justify-center hover:bg-gray-700 transition-colors duration-200"
-                  aria-label={`Visit ${link.name} profile`}
+                  className="text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1"
                 >
-                  <IconComponent className="w-5 h-5 text-white" />
+                  {link.name}
                 </a>
-              );
-            })}
+              ))}
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-playfair text-lg font-semibold mb-4">Get In Touch</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-gray-400">
+                <Mail className="w-4 h-4" />
+                <span className="text-sm">gsuji018@gmail.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400">
+                <Phone className="w-4 h-4" />
+                <span className="text-sm">+91 9480112318</span>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 Sujith G. All rights reserved.
-          </p>
+
+        {/* Social Links & Copyright */}
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+            <div className="flex space-x-4">
+              {socialLinks.map((link) => {
+                const IconComponent = link.icon;
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center ${link.color} hover:text-white transition-all duration-200 hover:scale-110`}
+                  >
+                    <IconComponent className="w-5 h-5" />
+                  </a>
+                );
+              })}
+            </div>
+            
+            <div className="text-center md:text-right">
+              <p className="text-gray-400 text-sm">
+                © 2024 Sujith G. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Built with React, TypeScript & Tailwind CSS
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
