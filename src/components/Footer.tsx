@@ -32,18 +32,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-card border-t border-border py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
+              <div className="w-12 h-12 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center">
+                <span className="text-primary font-bold text-xl">S</span>
               </div>
-              <span className="font-playfair font-bold text-2xl">Sujith G</span>
+              <span className="font-playfair font-bold text-2xl gradient-text">Sujith G</span>
             </div>
-            <p className="text-gray-400 max-w-md">
+            <p className="text-muted-foreground max-w-md">
               QA Engineer & Full Stack Developer crafting seamless digital experiences through 
               meticulous testing and innovative development.
             </p>
@@ -51,13 +51,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-playfair text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-playfair text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
             <div className="grid grid-cols-2 gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm py-1"
                 >
                   {link.name}
                 </a>
@@ -67,13 +67,13 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-playfair text-lg font-semibold mb-4">Get In Touch</h3>
+            <h3 className="font-playfair text-lg font-semibold mb-4 text-foreground">Get In Touch</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-400">
+              <div className="flex items-center space-x-3 text-muted-foreground">
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">gsuji018@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400">
+              <div className="flex items-center space-x-3 text-muted-foreground">
                 <Phone className="w-4 h-4" />
                 <span className="text-sm">+91 9480112318</span>
               </div>
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
 
         {/* Social Links & Copyright */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
             <div className="flex space-x-4">
               {socialLinks.map((link) => {
@@ -93,7 +93,7 @@ const Footer = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center ${link.color} hover:text-white transition-all duration-200 hover:scale-110`}
+                    className="w-12 h-12 glass border border-border/50 rounded-lg flex items-center justify-center hover:border-primary/50 hover:text-primary transition-all duration-200 hover:scale-110"
                   >
                     <IconComponent className="w-5 h-5" />
                   </a>
@@ -102,10 +102,10 @@ const Footer = () => {
             </div>
             
             <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
+              <p className="text-muted-foreground text-sm">
                 © 2024 Sujith G. All rights reserved.
               </p>
-              <p className="text-gray-500 text-xs mt-1">
+              <p className="text-muted-foreground/70 text-xs mt-1">
                 Built with React, TypeScript & Tailwind CSS
               </p>
             </div>

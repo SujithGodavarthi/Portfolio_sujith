@@ -11,77 +11,78 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
-      {/* Background Elements */}
+    <section id="hero" className="min-h-screen relative overflow-hidden bg-background geometric-bg particles">
+      {/* Geometric Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-30"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-yellow-100 rounded-full opacity-40"></div>
-        <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-100 rounded-full opacity-35"></div>
-        <div className="absolute bottom-20 right-10 w-28 h-28 bg-green-100 rounded-full opacity-30"></div>
+        <div className="absolute top-20 right-1/4 w-64 h-64 border border-primary/30 rotate-45"></div>
+        <div className="absolute bottom-20 left-1/4 w-32 h-32 border border-accent/20 rotate-12"></div>
+        <div className="absolute top-1/2 right-20 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-20 w-40 h-40 bg-accent/5 rounded-full blur-2xl"></div>
       </div>
 
       <div className="container mx-auto px-4 h-screen flex items-center relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-          {/* Left Side - QA Engineer */}
-          <div className="text-center lg:text-left animate-fade-in">
-            <div className="flex items-center justify-center lg:justify-start mb-6">
-              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
-                <Bug className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-blue-600 font-semibold text-lg">QA Engineer</span>
-            </div>
-            <h1 className="font-playfair text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-              Quality
-              <br />
-              <span className="text-blue-500">Assurance</span>
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Main Heading */}
+          <div className="mb-8 animate-fade-in">
+            <h1 className="font-playfair text-6xl lg:text-8xl font-bold gradient-text mb-6">
+              The QA Trinity
             </h1>
-            <p className="text-gray-600 text-lg mb-6 max-w-md">
-              Meticulous testing and quality control to ensure robust, scalable software systems.
+            <h2 className="text-2xl lg:text-4xl font-semibold text-foreground mb-4">
+              Powering Quality Assurance
+            </h2>
+            <p className="text-xl lg:text-2xl text-muted-foreground">
+              Manual | Automation | Full Stack
             </p>
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Selenium</span>
-              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">JIRA</span>
-              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">TestNG</span>
+          </div>
+
+          {/* Professional Description */}
+          <div className="mb-12 animate-slide-up">
+            <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+              Sujith G – QA Engineer & Full Stack Developer
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Crafting seamless digital experiences through meticulous testing and innovative development.
+            </p>
+          </div>
+
+          {/* Profile Image with Geometric Frame */}
+          <div className="mb-12 relative">
+            <div className="relative inline-block">
+              <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-2 border-primary/50 shadow-2xl shadow-primary/25">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+                  alt="Sujith G"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Geometric decorations around profile */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 border-2 border-primary rotate-45"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 border-2 border-accent rotate-12"></div>
             </div>
           </div>
 
-          {/* Right Side - Full Stack Developer */}
-          <div className="text-center lg:text-right animate-slide-up">
-            <div className="flex items-center justify-center lg:justify-end mb-6">
-              <span className="text-green-600 font-semibold text-lg mr-4">Full Stack Developer</span>
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-            </div>
-            <h1 className="font-playfair text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-              <span className="text-green-500">Development</span>
-              <br />
-              Innovation
-            </h1>
-            <p className="text-gray-600 text-lg mb-6 max-w-md lg:ml-auto">
-              Crafting seamless digital experiences through innovative development solutions.
-            </p>
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-end">
-              <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">React.js</span>
-              <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">Node.js</span>
-              <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">MongoDB</span>
-            </div>
+          {/* Skills Tags */}
+          <div className="flex flex-wrap gap-4 justify-center mb-12">
+            <span className="px-6 py-3 glass border border-primary/30 text-primary font-medium rounded-lg futuristic-btn">
+              <Bug className="w-4 h-4 inline mr-2" />
+              Quality Assurance
+            </span>
+            <span className="px-6 py-3 glass border border-accent/30 text-accent font-medium rounded-lg futuristic-btn">
+              <Code className="w-4 h-4 inline mr-2" />
+              Full Stack Development
+            </span>
           </div>
-        </div>
-      </div>
 
-      {/* Center Profile */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-        <div className="relative">
-          <div className="w-32 h-32 lg:w-40 lg:h-40 bg-white rounded-full shadow-2xl overflow-hidden border-4 border-white">
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
-              alt="Sujith G"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-            Sujith G
+          {/* Download CV Button */}
+          <div className="mb-16">
+            <a
+              href="/CV-Placeholder.pdf"
+              download
+              className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground font-bold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/50 futuristic-btn"
+            >
+              <ArrowDown className="w-5 h-5 mr-3" />
+              Download CV
+            </a>
           </div>
         </div>
       </div>
@@ -90,10 +91,10 @@ const Hero = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button
           onClick={scrollToAbout}
-          className="flex flex-col items-center text-gray-400 hover:text-gray-600 transition-colors duration-200"
+          className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors duration-200"
           aria-label="Scroll to about section"
         >
-          <span className="text-sm font-medium mb-2">Scroll</span>
+          <span className="text-sm font-medium mb-2">Explore</span>
           <ArrowDown className="w-5 h-5" />
         </button>
       </div>

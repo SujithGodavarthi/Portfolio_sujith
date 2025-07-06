@@ -72,26 +72,26 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-background particles">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="font-playfair text-4xl lg:text-6xl font-bold gradient-text mb-6">
             Get In Touch
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Let's discuss how I can contribute to your team's success
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-6">
+          <div className="glass p-8 rounded-lg border border-border/50">
+            <h3 className="font-playfair text-2xl font-bold gradient-text mb-6">
               Send a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
                   Full Name
                 </label>
                 <input
@@ -101,13 +101,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 glass border border-border/50 rounded-lg focus:border-primary focus:outline-none transition-colors duration-200 bg-transparent text-foreground"
                   placeholder="Your name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
                   Email Address
                 </label>
                 <input
@@ -117,13 +117,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-colors duration-200"
+                  className="w-full px-4 py-3 glass border border-border/50 rounded-lg focus:border-primary focus:outline-none transition-colors duration-200 bg-transparent text-foreground"
                   placeholder="your.email@example.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
                   Message
                 </label>
                 <textarea
@@ -133,14 +133,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 glass border border-border/50 rounded-lg focus:border-primary focus:outline-none transition-colors duration-200 resize-none bg-transparent text-foreground"
                   placeholder="Tell me about your project or opportunity..."
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-green-500 text-white py-4 px-6 rounded-xl font-semibold hover:from-blue-600 hover:to-green-600 transition-all duration-200 flex items-center justify-center space-x-2 hover:scale-105"
+                className="w-full bg-primary text-primary-foreground py-4 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-200 flex items-center justify-center space-x-2 hover:scale-105 futuristic-btn"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>
@@ -150,8 +150,8 @@ const Contact = () => {
           
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-6">
+            <div className="glass p-8 rounded-lg border border-border/50">
+              <h3 className="font-playfair text-2xl font-bold gradient-text mb-6">
                 Contact Information
               </h3>
               <div className="space-y-6">
@@ -163,14 +163,14 @@ const Contact = () => {
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                       rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200 group"
+                      className="flex items-center space-x-4 p-4 rounded-lg hover:bg-secondary/20 transition-colors duration-200 group"
                     >
-                      <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
-                        <IconComponent className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 bg-primary/20 border border-primary/30 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                        <IconComponent className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-900">{item.label}</div>
-                        <div className="text-gray-600">{item.value}</div>
+                        <div className="font-semibold text-foreground">{item.label}</div>
+                        <div className="text-muted-foreground">{item.value}</div>
                       </div>
                     </a>
                   );
@@ -178,15 +178,15 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8">
-              <h3 className="font-playfair text-xl font-bold text-gray-900 mb-4">
+            <div className="glass p-8 rounded-lg border border-border/50">
+              <h3 className="font-playfair text-xl font-bold gradient-text mb-4">
                 Ready to Collaborate?
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-muted-foreground mb-6">
                 I'm always excited to work on challenging projects and contribute to innovative teams. 
                 Let's discuss how my QA expertise and full-stack development skills can benefit your organization.
               </p>
-              <div className="flex items-center space-x-2 text-sm text-gray-500">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
                 <span>Available for remote and hybrid opportunities</span>
               </div>
