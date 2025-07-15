@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="absolute bottom-1/3 left-20 w-40 h-40 bg-accent/5 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 h-screen flex items-center relative z-10">
+      <div className="container mx-auto px-4 min-h-screen flex items-center relative z-10 pt-24 pb-12">
         <div className="max-w-6xl mx-auto text-center">
           {/* Main Heading */}
           <div className="mb-8 animate-fade-in">
@@ -74,14 +74,14 @@ const Hero = () => {
           </div>
 
           {/* Download CV Button */}
-          <div className="mb-16">
+          <div className="mb-20">
             <a
               href="/CV-Placeholder.pdf"
               download
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-primary to-accent text-white font-bold text-lg rounded-2xl hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-primary/50 futuristic-btn relative overflow-hidden group"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-accent text-white font-bold text-base rounded-xl hover:from-primary/90 hover:to-accent/90 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-primary/30 relative overflow-hidden group backdrop-blur-sm"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <ArrowDown className="w-6 h-6 mr-3 relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <ArrowDown className="w-5 h-5 mr-3 relative z-10" />
               <span className="relative z-10">Download CV</span>
             </a>
           </div>
@@ -89,7 +89,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
         <button
           onClick={scrollToAbout}
           className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors duration-200"

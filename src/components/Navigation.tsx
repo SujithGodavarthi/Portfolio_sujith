@@ -28,8 +28,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, isScrolled }) =>
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'glass backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-6'
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border/50 py-3' : 'bg-background/80 backdrop-blur-sm py-6'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -42,15 +42,15 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, isScrolled }) =>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative text-sm font-medium transition-all duration-200 hover:text-primary ${
+                className={`relative text-sm font-medium transition-all duration-200 px-3 py-2 rounded-lg hover:bg-primary/10 ${
                   activeSection === item.id 
-                    ? 'text-primary' 
-                    : 'text-muted-foreground'
+                    ? 'text-primary bg-primary/20' 
+                    : 'text-foreground hover:text-primary'
                 }`}
               >
                 {item.label}
@@ -64,7 +64,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, isScrolled }) =>
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden w-10 h-10 glass border border-border/50 rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors duration-200 z-50"
+            className="lg:hidden w-10 h-10 bg-background/90 border border-border/50 rounded-lg flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-200 z-[101] backdrop-blur-sm"
           >
             {isMenuOpen ? (
               <X className="w-5 h-5 text-foreground" />
@@ -76,20 +76,22 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, isScrolled }) =>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 glass border border-border/50 rounded-2xl shadow-lg p-4 z-50 relative backdrop-blur-xl">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
-                  activeSection === item.id 
-                    ? 'bg-primary/20 text-primary border border-primary/30' 
-                    : 'text-muted-foreground hover:bg-secondary/50'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-2xl z-[102] px-4 py-6">
+            <div className="space-y-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`block w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
+                    activeSection === item.id 
+                      ? 'bg-primary/20 text-primary border border-primary/30' 
+                      : 'text-foreground hover:bg-primary/10 hover:text-primary'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>
