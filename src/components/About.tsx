@@ -86,19 +86,27 @@ const About = () => {
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-foreground">Quality Assurance & Testing Methodologies</span>
+                    <span className="text-foreground">AI-Powered Automation & Agent Development</span>
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-foreground">AI Agent Development with ChatGPT, Gemini & Multiple AI Platforms</span>
+                    <span className="text-foreground">ChatGPT, Gemini & Multi-Platform AI Integration</span>
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-foreground">Test Automation with Selenium & TestNG</span>
+                    <span className="text-foreground">Marketing Automation & Intelligent Email Systems</span>
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-foreground">Marketing Automation & Client Communication Systems</span>
+                    <span className="text-foreground">Quality Assurance & Test Automation with Selenium</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                    <span className="text-foreground">AI Journalism & Content Automation Techniques</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                    <span className="text-foreground">Webhook Integration & Client Onboarding Systems</span>
                   </div>
                 </div>
               </div>

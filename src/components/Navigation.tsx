@@ -64,7 +64,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, isScrolled }) =>
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden w-10 h-10 glass border border-border/50 rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors duration-200"
+            className="md:hidden w-10 h-10 glass border border-border/50 rounded-lg flex items-center justify-center hover:border-primary/50 transition-colors duration-200 z-50"
           >
             {isMenuOpen ? (
               <X className="w-5 h-5 text-foreground" />
@@ -76,7 +76,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, isScrolled }) =>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 glass border border-border/50 rounded-2xl shadow-lg p-4">
+          <div className="md:hidden mt-4 glass border border-border/50 rounded-2xl shadow-lg p-4 z-50 relative backdrop-blur-xl">
             {navItems.map((item) => (
               <button
                 key={item.id}
