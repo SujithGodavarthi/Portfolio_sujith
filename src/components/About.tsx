@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Award, Target, Zap } from 'lucide-react';
+import { Award, Target, Bot } from 'lucide-react';
 
 const About = () => {
   const highlights = [
@@ -10,9 +10,9 @@ const About = () => {
       description: "Detail-oriented approach to ensure robust, scalable software systems"
     },
     {
-      icon: Zap,
-      title: "Full Stack Skills",
-      description: "End-to-end development capabilities with modern technologies"
+      icon: Bot,
+      title: "AI Automation",
+      description: "Building intelligent agents for marketing automation and client communication"
     },
     {
       icon: Award,
@@ -31,9 +31,9 @@ const About = () => {
               About Me
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Detail-oriented MCA graduate with hands-on experience in manual and automation testing, 
-              test case design, and defect tracking using tools like Selenium and JIRA. Eager to contribute 
-              to innovative QA teams by ensuring robust, scalable, and compliant software systems.
+              AI Automation Specialist and QA Engineer with expertise in building fully automated AI agents 
+              for marketing and client onboarding. Experienced in integrating ChatGPT, Gemini, and multiple AI 
+              platforms to deliver intelligent solutions. Combining AI innovation with quality assurance excellence.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ const About = () => {
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-foreground">Full Stack Development with Modern Frameworks</span>
+                    <span className="text-foreground">AI Agent Development with ChatGPT, Gemini & Multiple AI Platforms</span>
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-4 flex-shrink-0"></div>
@@ -98,7 +98,7 @@ const About = () => {
                   </div>
                   <div className="flex items-start">
                     <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                    <span className="text-foreground">Agile Development & SDLC Methodologies</span>
+                    <span className="text-foreground">Marketing Automation & Client Communication Systems</span>
                   </div>
                 </div>
               </div>

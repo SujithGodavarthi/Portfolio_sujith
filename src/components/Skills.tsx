@@ -1,11 +1,24 @@
 
 import React from 'react';
-import { Code, Bug, Database, Globe, Settings, GitBranch } from 'lucide-react';
+import { Code, Bug, Database, Globe, Settings, Bot } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Manual Testing",
+      title: "AI Automation",
+      icon: Bot,
+      color: "from-purple-500 to-purple-600",
+      skills: [
+        "ChatGPT API Integration",
+        "Gemini AI Implementation",
+        "AI Agent Development",
+        "Marketing Automation",
+        "Email Automation Systems",
+        "Webhook Integration"
+      ]
+    },
+    {
+      title: "Quality Assurance",
       icon: Bug,
       color: "from-blue-500 to-blue-600",
       skills: [
@@ -18,42 +31,29 @@ const Skills = () => {
       ]
     },
     {
-      title: "Automation & Tools",
-      icon: Settings,
+      title: "Development & Tools",
+      icon: Code,
       color: "from-green-500 to-green-600",
       skills: [
-        "Selenium WebDriver",
-        "JUnit / TestNG",
-        "Postman (API Testing)",
-        "SQL for Database Testing",
-        "JIRA / Bugzilla",
-        "Agile & DevOps"
-      ]
-    },
-    {
-      title: "Programming",
-      icon: Code,
-      color: "from-purple-500 to-purple-600",
-      skills: [
-        "Java / Core Java",
+        "Java / Python",
         "HTML, CSS, JavaScript",
-        "React.js",
-        "Node.js & Express.js",
-        "MongoDB",
-        "Version Control: Git/GitHub"
+        "React.js / Node.js",
+        "Selenium WebDriver",
+        "JIRA / Postman",
+        "Git/GitHub"
       ]
     }
   ];
 
   const techStack = [
+    { name: 'ChatGPT API', icon: '🤖', color: 'bg-purple-100 text-purple-800' },
+    { name: 'Gemini AI', icon: '✨', color: 'bg-blue-100 text-blue-800' },
+    { name: 'Python', icon: '🐍', color: 'bg-yellow-100 text-yellow-800' },
     { name: 'Java', icon: '☕', color: 'bg-orange-100 text-orange-800' },
-    { name: 'Selenium', icon: '🤖', color: 'bg-green-100 text-green-800' },
+    { name: 'Selenium', icon: '🔧', color: 'bg-green-100 text-green-800' },
     { name: 'React', icon: '⚛️', color: 'bg-blue-100 text-blue-800' },
     { name: 'Node.js', icon: '🚀', color: 'bg-green-100 text-green-800' },
-    { name: 'MongoDB', icon: '🍃', color: 'bg-green-100 text-green-800' },
     { name: 'JIRA', icon: '📋', color: 'bg-blue-100 text-blue-800' },
-    { name: 'Postman', icon: '📮', color: 'bg-orange-100 text-orange-800' },
-    { name: 'Git', icon: '📝', color: 'bg-gray-100 text-gray-800' },
   ];
 
   return (
@@ -64,7 +64,7 @@ const Skills = () => {
             Skills & Technologies
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for quality assurance and full-stack development
+            A comprehensive toolkit for AI automation, quality assurance, and intelligent system development
           </p>
         </div>
 

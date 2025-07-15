@@ -1,9 +1,18 @@
 
 import React from 'react';
-import { ExternalLink, Github, Code, TestTube } from 'lucide-react';
+import { ExternalLink, Github, Code, TestTube, Bot, Mail } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'AI Marketing & Onboarding Automation',
+      role: 'AI Automation Specialist',
+      technologies: ['ChatGPT API', 'Gemini AI', 'Python', 'Webhook Integration', 'Email Automation'],
+      description: 'Built fully automated AI agents for marketing automation and client onboarding form submissions. Integrated multiple AI platforms including ChatGPT and Gemini to send personalized, intelligent emails to clients with better engagement rates.',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop',
+      type: 'AI Automation',
+      color: 'from-purple-500 to-purple-600'
+    },
     {
       title: 'PayToll Web Application',
       role: 'Frontend Developer and QA',
@@ -36,7 +45,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -76,13 +85,16 @@ const Projects = () => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    {project.type === 'QA & Frontend' ? (
+                    {project.type === 'AI Automation' ? (
+                      <Bot className="w-4 h-4 text-purple-500" />
+                    ) : project.type === 'QA & Frontend' ? (
                       <TestTube className="w-4 h-4 text-primary" />
                     ) : (
                       <Code className="w-4 h-4 text-accent" />
                     )}
                     <span className="text-sm text-muted-foreground">
-                      {project.type === 'QA & Frontend' ? 'Testing Focus' : 'Development Focus'}
+                      {project.type === 'AI Automation' ? 'AI Focus' : 
+                       project.type === 'QA & Frontend' ? 'Testing Focus' : 'Development Focus'}
                     </span>
                   </div>
                 </div>

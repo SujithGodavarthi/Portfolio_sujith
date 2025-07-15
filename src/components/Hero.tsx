@@ -28,20 +28,20 @@ const Hero = () => {
               The QA Trinity
             </h1>
             <h2 className="text-2xl lg:text-4xl font-semibold text-foreground mb-4">
-              Powering Quality Assurance
+              Powering AI Automation & Quality
             </h2>
             <p className="text-xl lg:text-2xl text-muted-foreground">
-              Manual | Automation | Full Stack
+              AI Agents | Automation | QA Engineering
             </p>
           </div>
 
           {/* Professional Description */}
           <div className="mb-12 animate-slide-up">
             <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-              Sujith G – QA Engineer & Full Stack Developer
+              Sujith G – AI Automation Specialist & QA Engineer
             </h3>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Crafting seamless digital experiences through meticulous testing and innovative development.
+              Building intelligent automation solutions with AI-powered agents for marketing, onboarding, and quality assurance.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ const Hero = () => {
             </span>
             <span className="px-6 py-3 glass border border-accent/30 text-accent font-medium rounded-lg futuristic-btn">
               <Code className="w-4 h-4 inline mr-2" />
-              Full Stack Development
+              AI Agent Development
             </span>
           </div>
 

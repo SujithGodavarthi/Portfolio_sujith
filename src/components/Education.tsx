@@ -17,6 +17,12 @@ const Education = () => {
     },
     {
       year: '2024',
+      title: 'AI Journalism Workshop',
+      institution: 'GrowthSchool',
+      description: 'Specialized training in AI-powered journalism, content creation, and automated reporting techniques'
+    },
+    {
+      year: '2024',
       title: 'Professional Certifications',
       institution: 'Multiple Platforms',
       description: 'Softskill & Industry Readiness (Mind Parkour), Full Stack Development (LearnTube), Digital 101 Journey (Future Skills Prime)'
