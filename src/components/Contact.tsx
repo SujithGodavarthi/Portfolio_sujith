@@ -44,7 +44,7 @@ const Contact = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('https://suji018.app.n8n.cloud/webhook-test/2add45d3-0a1c-41cc-ac78-c3efe74e6075', {
+      const response = await fetch('http://localhost:5678/webhook-test/e2f8f241-7e20-4a7a-9ccb-b1c705f66baa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ const Contact = () => {
                 className="w-full bg-primary text-primary-foreground py-4 px-6 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-200 flex items-center justify-center space-x-2 hover:scale-105 futuristic-btn"
               >
                 <Send className="w-5 h-5" />
-                <span>Send Message</span>
+                <span>Offer Me</span>
               </button>
             </form>
           </div>
