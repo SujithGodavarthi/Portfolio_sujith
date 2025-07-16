@@ -68,7 +68,11 @@ const Contact = () => {
           if (responseText.trim()) {
             // Try to parse as JSON if there's content
             responseData = JSON.parse(responseText);
-            outputMessage = responseData.output || responseText;
+            // Handle nested response structure from n8n.io
+            outputMessage = responseData.response?.generations?.[0]?.text || 
+                          responseData.output || 
+                          responseData.text || 
+                          responseText;
           } else {
             // Handle empty response with default message
             outputMessage = "Thank you for reaching out! Your message has been received and I'll get back to you soon.";
