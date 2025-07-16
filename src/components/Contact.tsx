@@ -50,20 +50,37 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
+        mode: 'cors', // Explicitly set CORS mode
         body: JSON.stringify(formData),
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
+
       if (response.ok) {
-        const responseData = await response.json();
-        setWebhookResponse(responseData.output || 'No output received');
+        // Try to get response as text first
+        const responseText = await response.text();
+        console.log('Response text:', responseText);
+        
+        let responseData;
+        try {
+          // Try to parse as JSON
+          responseData = JSON.parse(responseText);
+          setWebhookResponse(responseData.output || responseText || 'No output received');
+        } catch (parseError) {
+          // If it's not JSON, use the text directly
+          setWebhookResponse(responseText || 'No output received');
+        }
+        
         setFormData({ name: '', email: '', message: '' });
         alert('Thank you for your message! I\'ll get back to you soon.');
       } else {
-        alert('There was an error sending your message. Please try again.');
+        console.error('Response not ok:', response.status, response.statusText);
+        alert(`Error: ${response.status} - ${response.statusText}`);
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      alert('There was an error sending your message. Please try again.');
+      alert(`Network error: ${error.message}. Please check if the webhook URL is accessible.`);
     }
   };
 
