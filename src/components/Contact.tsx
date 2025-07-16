@@ -54,8 +54,8 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        const responseData = await response.text();
-        setWebhookResponse(responseData);
+        const responseData = await response.json();
+        setWebhookResponse(responseData.output || 'No output received');
         setFormData({ name: '', email: '', message: '' });
         alert('Thank you for your message! I\'ll get back to you soon.');
       } else {
@@ -152,7 +152,7 @@ const Contact = () => {
             
             {webhookResponse && (
               <div className="mt-6 p-4 glass border border-border/50 rounded-lg">
-                <h4 className="font-semibold text-foreground mb-2">Here is My Response</h4>
+                <h4 className="font-semibold text-foreground mb-2">Here is my Quick response</h4>
                 <div className="text-muted-foreground whitespace-pre-wrap">{webhookResponse}</div>
               </div>
             )}
