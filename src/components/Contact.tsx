@@ -8,6 +8,7 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [webhookResponse, setWebhookResponse] = useState('');
 
   const contactInfo = [
     {
@@ -53,6 +54,8 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        const responseData = await response.text();
+        setWebhookResponse(responseData);
         setFormData({ name: '', email: '', message: '' });
         alert('Thank you for your message! I\'ll get back to you soon.');
       } else {
@@ -146,6 +149,13 @@ const Contact = () => {
                 <span>Offer Me</span>
               </button>
             </form>
+            
+            {webhookResponse && (
+              <div className="mt-6 p-4 glass border border-border/50 rounded-lg">
+                <h4 className="font-semibold text-foreground mb-2">Here is My Response</h4>
+                <div className="text-muted-foreground whitespace-pre-wrap">{webhookResponse}</div>
+              </div>
+            )}
           </div>
           
           {/* Contact Information */}
