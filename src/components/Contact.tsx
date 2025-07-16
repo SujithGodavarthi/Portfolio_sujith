@@ -50,7 +50,7 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'cors', // Explicitly set CORS mode
+        mode: 'cors',
         body: JSON.stringify(formData),
       });
 
@@ -58,20 +58,27 @@ const Contact = () => {
       console.log('Response ok:', response.ok);
 
       if (response.ok) {
-        // Try to get response as text first
         const responseText = await response.text();
         console.log('Response text:', responseText);
         
         let responseData;
+        let outputMessage = '';
+        
         try {
-          // Try to parse as JSON
-          responseData = JSON.parse(responseText);
-          setWebhookResponse(responseData.output || responseText || 'No output received');
+          if (responseText.trim()) {
+            // Try to parse as JSON if there's content
+            responseData = JSON.parse(responseText);
+            outputMessage = responseData.output || responseText;
+          } else {
+            // Handle empty response with default message
+            outputMessage = "Thank you for reaching out! Your message has been received and I'll get back to you soon.";
+          }
         } catch (parseError) {
-          // If it's not JSON, use the text directly
-          setWebhookResponse(responseText || 'No output received');
+          // If it's not JSON, use the text directly or default message
+          outputMessage = responseText.trim() || "Thank you for reaching out! Your message has been received and I'll get back to you soon.";
         }
         
+        setWebhookResponse(outputMessage);
         setFormData({ name: '', email: '', message: '' });
         alert('Thank you for your message! I\'ll get back to you soon.');
       } else {
